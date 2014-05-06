@@ -57,11 +57,7 @@ when "ubuntu"
     set['djbdns']['bin_dir'] = "/usr/local/bin"
   end
 when "debian"
-  if node['platform_version'].to_f >= 5.0
-    set['djbdns']['bin_dir'] = "/usr/bin"
-  else
-    set['djbdns']['bin_dir'] = "/usr/local/bin"
-  end
+  set['djbdns']['bin_dir'] = "/usr/local/bin"
 when "arch"
   set['djbdns']['bin_dir'] = "/usr/bin"
 else
